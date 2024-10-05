@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgData", "AgData.csproj", "{F559D5B9-60AF-475D-B94C-19107147EB07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgData", "ApiTests\AgData.csproj", "{F559D5B9-60AF-475D-B94C-19107147EB07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTests", "SeleniumTests\SeleniumTests.csproj", "{1DA5180C-397E-465F-85E4-525014F56854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,11 +17,15 @@ Global
 		{F559D5B9-60AF-475D-B94C-19107147EB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F559D5B9-60AF-475D-B94C-19107147EB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F559D5B9-60AF-475D-B94C-19107147EB07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA5180C-397E-465F-85E4-525014F56854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA5180C-397E-465F-85E4-525014F56854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA5180C-397E-465F-85E4-525014F56854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA5180C-397E-465F-85E4-525014F56854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B33A5091-4DB4-494C-9BA1-0E9F29D36929}
+		SolutionGuid = {2F798122-75DA-40C4-BB5C-AE96C2CB3906}
 	EndGlobalSection
 EndGlobal
