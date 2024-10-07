@@ -1,4 +1,5 @@
 # Automated API and UI Test Suite
+# By Jordan Harris for AgData
 
 ## Project Overview
 
