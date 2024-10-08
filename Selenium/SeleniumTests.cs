@@ -23,6 +23,7 @@ namespace Selenium{
         public void TestCompanyOverviewWorkflow() {
             var options = new ChromeOptions();
             options.AddArgument("start-maximized");
+            Console.WriteLine("Opened chrome in maximized window for the correct web layout");
             using (IWebDriver driver = new ChromeDriver(options)) {
                 //Create references
                 driver.Navigate().GoToUrl("https://www.agdata.com");
@@ -36,7 +37,8 @@ namespace Selenium{
                 //Fetch headings from "Our Values" section
                 var valuesHeadings = companyPage.GetOurValuesHeadings();
                 Assert.NotEmpty(valuesHeadings); // Ensure headings are found
-                foreach (var heading in valuesHeadings) {
+                Console.WriteLine("Headings in \"Our Values\" Output >");
+                foreach (string heading in valuesHeadings) {
                     Console.WriteLine(heading);
                 }
 
@@ -61,7 +63,7 @@ namespace Selenium{
             overviewLink.Click();
 
             //Verify Debug out
-            Console.WriteLine("Completed HomePage");
+            Console.WriteLine("Homepage test completed. Navigate to \"Overview\" was sucessful");
         }
     }
 
@@ -74,9 +76,6 @@ namespace Selenium{
 
             var headings = _driver.FindElements(ourValuesHeadings).Select(e => e.Text).ToList();
 
-            //Dirty way to verify info, could be put into a log
-            Console.WriteLine("Got Headings " + headings.ToString());
-
             return headings;
         }
 
@@ -84,7 +83,7 @@ namespace Selenium{
         public void ClickLetsGetStarted() {
             var letsGetStartedButton = _wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a[text()=\"Let's Get Started\"]")));
             letsGetStartedButton.Click();
-            Console.WriteLine("Clicked Button");
+            Console.WriteLine("Clicked \"Let's Get Started\" button by referring to text value in a");
         }
     }
 
@@ -99,7 +98,7 @@ namespace Selenium{
             //Verify 2 sections of the site
             bool bothLoaded = getInTouch.Displayed && gform.Displayed; 
 
-            Console.WriteLine("Contact form is = " + bothLoaded);
+            Console.WriteLine("Contact form is displayed = " + bothLoaded);
 
             return bothLoaded;
         }
